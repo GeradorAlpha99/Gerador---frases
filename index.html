@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerador de Frases Motivacionais</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+    #frase {
+      font-size: 24px;
+      margin: 30px;
+      padding: 20px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 16px;
+      background-color: #1abc9c;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #16a085;
+    }
+    #doar {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Frase Motivacional do Dia</h1>
+  <div id="frase">Clique no botão abaixo para gerar sua frase motivacional!</div>
+  <button onclick="gerarFrase()">Nova Frase</button>
+
+  <div id="doar">
+    <p>Para acessar frases ilimitadas, contribua com <strong>R$5</strong>:</p>
+    <a href="https://ko-fi.com/seuusuario" target="_blank">
+      <button class="btn">Pagar R$5 com Pix/Cartão</button>
+    </a>
+  </div>
+
+  <script>
+    const frases = [
+      "Você é mais forte do que imagina.",
+      "Grandes coisas levam tempo. Continue.",
+      "A disciplina vence a motivação.",
+      "Você só falha se desistir.",
+      "Cada dia é uma nova chance.",
+      "Confie no processo. O progresso vem.",
+      "Pequenos passos diários levam a grandes conquistas.",
+      "Você é capaz de realizar o impossível.",
+      "Coragem não é ausência de medo, é ação apesar dele.",
+      "Seu futuro depende do que você faz hoje."
+    ];
+
+    function gerarFrase() {
+      const indice = Math.floor(Math.random() * frases.length);
+      document.getElementById("frase").innerText = frases[indice];
+    }
+  </script>
+</body>
+        </html>
